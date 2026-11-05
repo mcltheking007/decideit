@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DecideIt — Make Every Decision Easier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h2>Decide<span>It.</span></h2>
+  <p>Less thinking. Easier decisions.</p>
+</header>
+
+<main>
+  <section class="welcome">
+    <p class="tag">YOUR EVERYDAY DECISION PARTNER</p>
+    <h1>Can't decide?<br><span>Leave it to us.</span></h1>
+    <p>Life is full of choices. Let's make them easier.</p>
+  </section>
+
+  <section class="picker">
+    <h2>What are we deciding today?</h2>
+    <input id="options" placeholder="Enter choices separated by commas">
+    <button onclick="makeDecision()">Make my decision</button>
+    <div id="result">Your answer will appear here.</div>
+  </section>
+
+  <section class="categories">
+    <h2>Need some inspiration?</h2>
+    <div class="cards">
+      <button onclick="chooseCategory('food')">🍔 What to eat</button>
+      <button onclick="chooseCategory('movie')">🎬 What to watch</button>
+      <button onclick="chooseCategory('activity')">🎯 What to do</button>
+    </div>
+  </section>
+
+  <section class="picker">
+  <h2>Create your own decision list</h2>
+  <input id="listName" placeholder="List name (e.g. Weekend plans)">
+  <input id="listOptions" placeholder="Options separated by commas">
+  <button onclick="saveList()">Save my list</button>
+  <div id="savedLists"></div>
+</section>
+
+<section class="history">
+    <h2>Recent decisions</h2>
+    <ul id="history"></ul>
+  </section>
+</main>
+
+<footer>Made simple. Made for everyday. © 2026 DecideIt.</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+<section class="picker">
+  <h2>🎡 Decision Wheel</h2>
+  <p>Enter your choices, then spin the wheel!</p>
+  <input id="wheelOptions" placeholder="Pizza, Rice, Burger, Shawarma">
+  <div class="wheel-container">
+    <div class="pointer">▼</div>
+    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+  </div>
+  <button onclick="spinWheel()">🎡 Spin the wheel!</button>
+  <div id="wheelResult">Waiting for your spin...</div>
+</section>
